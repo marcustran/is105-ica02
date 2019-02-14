@@ -11,7 +11,6 @@ const ascii = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f"
 // Oppgave 1b
 // Implementer en funksjon som eksportere const ascii
 
-
 // Funksjon tar en "string literal" med kun ASCII tegn og lager en utskrift på
 // følgende format:
 // [ascii-kode heksadesimalt med store bokstaver A-F][mellomrom]
@@ -25,10 +24,30 @@ const ascii = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f"
 // ...
 func IterateOverASCIIStringLiteral(stringLiteral string) {
 	// Kode for Oppgave 1a
-	
+
+	stringLiteral = ascii
+
+	//tab := []string{ascii}
+
+	for a := range ascii {
+
+		fmt.Printf("%X %c %b\n", a, a, a)
+
+	}
+
+	/*s := "Hello, 世界"
+	for i, r := range s {
+		fmt.Printf("i%d r %c\n", i, r)
+	}
+	fmt.Println("----")
+	a := []rune(s)
+	for i, r := range a {
+		fmt.Printf("i%d r %c\n", i, r)
+	}*/
+
 }
 
-// Unix-like operating systems are known to use it as erase control character, i.e. to delete the previous character in the line mode. 
+// Unix-like operating systems are known to use it as erase control character, i.e. to delete the previous character in the line mode.
 
 // Funksjonen skal generere en utskrift fra en sekvens av bytes,
 // dvs. av typen []bytes (det betyr at du må finne den heksadesimale
